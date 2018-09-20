@@ -137,5 +137,5 @@ class Preprocessor():
 if __name__ == "__main__":
     p = Preprocessor()
     # p.preprocess('./diacritized_text')
-    # p.split(0.3)
+    # p.split(0.2)
     p.remove_diacritization()
