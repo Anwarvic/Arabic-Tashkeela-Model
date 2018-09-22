@@ -50,9 +50,9 @@ This is the first method that I'm going to walk you through inside the `Preproce
 
 After running this function, we should get a new directory called `./preprocessed` inside the parent directory. Inside this `preprocessed` directory, we should get 66 files.. [1, 2, 3, ...66]. Each file should contain roughly one million words, each word in a separate line.
 
-So, if the following Arabic line `مُقَدِّمَةُ الطَّبَرِيِّ شَيْخِ الدِّينِ فَجَاءَ فِيهِ بِالْعَجَبِ الْعُجَابِ` will be turned into:
+So, the following Arabic line `مُقَدِّمَةُ الطَّبَرِيِّ شَيْخِ الدِّينِ فَجَاءَ فِيهِ بِالْعَجَبِ الْعُجَابِ` will be turned into:
 
-```po23
+```
 مُقَدِّمَةُ
 الطَّبَرِيِّ
 شَيْخِ
@@ -61,12 +61,6 @@ So, if the following Arabic line `مُقَدِّمَةُ الطَّبَرِيّ�
 فِيهِ
 بِالْعَجَبِ
 الْعُجَابِ
-وَنَثَرَ
-فِيهِ
-أَلْبَابَ
-الْأَلْبَابِ
-وَفَتَحَ
-فِيهِ
 ```
 
 
@@ -163,7 +157,7 @@ where the first tuple is the consecutive three letters, and the second item is t
 
 **NOTE:**
 
-I have create a function in the `utils.py` file that are able to transform the pickle file into text file to be parsed directly into another programming language easily.
+I have created a function in the `utils.py` file that are able to transform the pickle file into text file to be parsed directly into another programming language easily.
 
 ```python
 >>> from utils import turn_pickle_to_text
@@ -175,7 +169,7 @@ I have create a function in the `utils.py` file that are able to transform the p
 
 ## diacritized_word()
 
-This method is used to diacritized a given word based on the HMM model. The input of this method is a clean word (with no diacrentization) and this method returns a diacrentized word based on the trained model. Let's see an example:
+This method is used to diacritize a given word based on the HMM model. The input of this method is a clean word (with no diacritization) and this method returns a diacritized word based on the trained model. Let's see an example:
 
 ```python
 >>> from hmm import HMM
@@ -207,7 +201,7 @@ As we can see, the word could be diacritized wrong...right? That's why I created
 
 ## diacritized_data()
 
-This method is used to diacritized the non-diacritized words in the test set.
+This method is used to diacritized the whole test set. It read the data from the member variable `self.test_dir`. This method puts the diacritized data into `self.predicted_dir` directory.
 
 
 
