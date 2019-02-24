@@ -23,7 +23,7 @@ class HMM(object):
 
         #load model if saved
         try:
-            with open(str(self.N)+'gram_CharModel.pickle', 'rb') as fout:
+            with open('model_weights/'+str(self.N)+'gram_CharModel.pickle', 'rb') as fout:
                 self.character_ngram = pickle.load(fout)
             print('Done Loading trained model!!')
         except FileNotFoundError:
