@@ -1,6 +1,9 @@
 # Tashkeela-Model
 This is a diacritization model for Arabic language. This model was built/trained using the [Tashkeela](https://www.kaggle.com/linuxscout/tashkeela): the Arabic diacritization corpus on Kaggle. Arabic diacritics are often missed in Arabic scripts. This feature is a handicap for new learner to read َArabic, text to speech conversion systems, reading and semantic analysis of Arabic texts. The automatic diacritization systems are the best solution to handle this issue. But such automation needs resources as diacritized texts to train and evaluate such systems.
 
+<div align="center">
+  <img src="https://github.com/Anwarvic/Arabic-Tashkeela-Model/assets/15960959/1df7c6fc-40f7-446f-8375-cd076ff22e09">
+</div>
 
 
 **NOTE:**
